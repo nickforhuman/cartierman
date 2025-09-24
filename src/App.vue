@@ -2,7 +2,7 @@
 // import { computed } from 'vue'
 import { RouterView, useRoute } from 'vue-router'
 import TitleComponent from './components/client/TitleComponent.vue'
-
+import HelpdeskComponent from './components/client/HelpdeskComponent.vue'
 const route = useRoute()
 const ClientComponentsShow = route.path.startsWith('/')
 </script>
@@ -13,6 +13,7 @@ const ClientComponentsShow = route.path.startsWith('/')
       <TitleComponent />
     </header>
     <RouterView />
+    <HelpdeskComponent v-if="ClientComponentsShow" />
   </main>
 </template>
 
