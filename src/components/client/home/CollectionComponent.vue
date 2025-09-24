@@ -9,7 +9,7 @@
       >
         <!-- eticket  -->
         <div
-          class="absolute bg-primary shadow-sm px-2 md:px-4 text-xs py-2 md:py-1 bg-secondary border-l-2 border-l-white text-primary top-2 right-0 z-10"
+          class="absolute shadow-sm px-2 md:px-4 text-xs py-2 md:py-1 bg-secondary border-l-2 border-l-white text-primary top-2 right-0 z-10"
         >
           <h1>Trend Collection</h1>
         </div>
@@ -24,7 +24,7 @@
         >
           <h1 class="text-xl md:text-md m-1">{{ collectionItem.name }}</h1>
           <p class="text-xs italic m-1">{{ collectionItem.description }}</p>
-          <div class="w-full flex justify-center items-center m-1">
+          <div class="w-full flex justify-center items-center p-1">
             <router-link
               to="/"
               class="px-4 py-2 w-64 bg-primary text-secondary hover:bg-white transition flex justify-center items-center gap-2"
