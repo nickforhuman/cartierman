@@ -75,30 +75,3 @@ const Helpdesk = () => {
   isHelpdesk.value = !isHelpdesk.value
 }
 </script>
-
-<style scoped>
-/* Slide animasiyası */
-.slide-enter-from {
-  opacity: 0;
-  transform: translateY(50px); /* aşağıdan gəlsin */
-}
-.slide-enter-active {
-  transition: all 0.4s ease;
-}
-.slide-enter-to {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.slide-leave-from {
-  opacity: 1;
-  transform: translateY(0);
-}
-.slide-leave-active {
-  transition: all 0.4s ease;
-}
-.slide-leave-to {
-  opacity: 0;
-  transform: translateY(50px);
-}
-</style>
