@@ -18,7 +18,8 @@
       <div class="grid grid-cols-3 w-full">
         <!-- links column -->
         <div class="flex justify-center md:justify-start">
-          <ul class="space-y-2 text-sm">
+          <ul class="space-y-2 text-sm text-center">
+            <li class="text-xl font-bold py-1 text-secondary">Short link</li>
             <li><router-link to="/" class="hover:underline">example</router-link></li>
             <li><router-link to="/" class="hover:underline">example</router-link></li>
             <li><router-link to="/" class="hover:underline">example</router-link></li>
@@ -30,7 +31,8 @@
 
         <!-- links column -->
         <div class="flex justify-center md:justify-start">
-          <ul class="space-y-2 text-sm">
+          <ul class="space-y-2 text-sm text-center">
+            <li class="text-xl font-bold py-1 text-secondary">Short link</li>
             <li><router-link to="/" class="hover:underline">example</router-link></li>
             <li><router-link to="/" class="hover:underline">example</router-link></li>
             <li><router-link to="/" class="hover:underline">example</router-link></li>
@@ -42,7 +44,8 @@
 
         <!-- links column -->
         <div class="flex justify-center md:justify-start">
-          <ul class="space-y-2 text-sm">
+          <ul class="space-y-2 text-sm text-center">
+            <li class="text-xl font-bold py-1 text-secondary">Short link</li>
             <li><router-link to="/" class="hover:underline">example</router-link></li>
             <li><router-link to="/" class="hover:underline">example</router-link></li>
             <li><router-link to="/" class="hover:underline">example</router-link></li>

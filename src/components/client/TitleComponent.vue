@@ -4,7 +4,7 @@ import { MapPinned, ChevronRight } from 'lucide-vue-next'
 <template>
   <!-- title bar start  -->
   <div
-    class="w-full h-auto bg-primary text-second flex md:justify-between justify-center items-center shadow-sm"
+    class="w-full h-auto sticky bg-primary text-second flex md:justify-between justify-center items-center shadow-sm"
   >
     <!-- get location direction  -->
     <div class="md:flex hidden justify-center">
