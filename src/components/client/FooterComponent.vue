@@ -7,7 +7,7 @@
       <!-- info start -->
       <div class="flex flex-col items-center md:items-start text-center md:text-left gap-2">
         <!-- logo -->
-        <h1 class="text-2xl font-bold">CARTIEMAN</h1>
+        <h1 class="text-3xl newsreader font-bold">CARTIEMAN</h1>
         <h2 class="text-md">LOREM IPSUM</h2>
         <p class="text-xs leading-relaxed">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit.

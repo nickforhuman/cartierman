@@ -1,5 +1,7 @@
 @import './base.css';
 @import './transition.css';
+@import './font.css';
+
 @theme {
   --color-primary: #111111;
   --color-secondary: #c5a572;

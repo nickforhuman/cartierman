@@ -22,7 +22,7 @@
         <div
           class="absolute bg-primary/60 text-secondary py-1 md:py-2 flex flex-col justify-center items-start z-10 w-full bottom-0"
         >
-          <h1 class="text-xl md:text-md m-1">{{ collectionItem.name }}</h1>
+          <h1 class="text-xl md:text-md m-1 newsreader">{{ collectionItem.name }}</h1>
           <p class="text-xs italic m-1">{{ collectionItem.description }}</p>
           <div class="w-full flex justify-center items-center p-1">
             <router-link

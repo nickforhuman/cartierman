@@ -17,7 +17,7 @@ const isAdmin = computed(() => route.path.startsWith('/admin'))
     </header>
     <RouterView />
     <HelpdeskComponent v-if="!isAdmin" />
-    <FooterComponent v-if="!isAdmin" />W
+    <FooterComponent v-if="!isAdmin" />
   </main>
 </template>
 
