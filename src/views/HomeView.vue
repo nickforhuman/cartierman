@@ -1,8 +1,6 @@
 <template>
-  <section class="w-full">
-    <IntroComponent />
-    <CollectionComponent />
-  </section>
+  <IntroComponent />
+  <CollectionComponent />
 </template>
 
 <script setup lang="ts">

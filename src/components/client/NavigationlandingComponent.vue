@@ -22,82 +22,95 @@
       <div @click="basketSidebarToggle()" class="cursor-pointer"><ShoppingBasket /></div>
     </div>
   </nav>
+  <!-- 🔎 Search Sidebar -->
   <transition name="slide">
-    <!-- search start  -->
-    <div
-      v-if="isSearchSidebar"
-      class="w-full overflow-hidden h-screen bg-[rgba(0,0,0,0.6)] fixed z-50 inset-0"
-    >
-      <div class="w-68 h-screen bg-white absolute left-0">
-        <!-- sidebar header  -->
-        <div class="text-secondary absolute top-0 left-0">
-          <button class="m-2 bg-primary/10 p-2 cursor-pointer" @click="searchSidebarToggle()">
+    <div v-if="isSearchSidebar" class="fixed inset-0 z-50 bg-black/50 flex">
+      <aside class="w-72 h-full bg-white shadow-xl relative">
+        <!-- header -->
+        <div class="flex items-center justify-between px-4 py-3 border-b">
+          <h2 class="text-lg font-semibold text-secondary">Search</h2>
+          <button class="p-2 rounded-full hover:bg-gray-100" @click="searchSidebarToggle()">
             <X />
           </button>
         </div>
-        <div class="py-16 flex justify-center items-center">
-          <form action="" class="m-2 relative flex">
-            <input
-              type="search"
-              placeholder="search..."
-              class="outline-none border-b border-b-secondart/30"
-            />
-            <button type="submit" class="flex justify-center items-center"><Search /></button>
+        <!-- content -->
+        <div class="p-4">
+          <form class="flex items-center border rounded-lg overflow-hidden">
+            <input type="search" placeholder="Search..." class="flex-1 px-3 py-2 outline-none" />
+            <button type="submit" class="px-3 py-2 bg-primary text-white hover:bg-primary/80">
+              <Search />
+            </button>
           </form>
         </div>
-      </div>
+      </aside>
     </div>
-    <!-- search end  -->
-  </transition>
-  <transition name="slide">
-    <!-- sidebars start  -->
-    <div
-      v-if="isNavSidebar"
-      class="w-full overflow-hidden h-screen bg-[rgba(0,0,0,0.6)] fixed z-50 inset-0"
-    >
-      <div class="w-68 h-screen bg-white">
-        <!-- sidebar header start -->
-        <div class="w-full flex justify-between items-center">
-          <div>
-            <h1 class="mx-2 text-secondary font-bold">CARTIERMAN</h1>
-          </div>
-          <div class="text-secondary">
-            <button class="m-2 bg-primary/10 p-2 cursor-pointer" @click="navSidebarToggle()">
-              <X />
-            </button>
-          </div>
-        </div>
-        <!-- sidebar header end  -->
-        <ul>
-          <li>
-            <router-link to="/" class="p-2 hover:bg-primary/20 w-full">Home</router-link>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- sidebars end  -->
   </transition>
 
-  <!-- sidebar basket start  -->
-
+  <!-- 📌 Navigation Sidebar -->
   <transition name="slide">
-    <!-- sidebars start  -->
-    <div
-      v-if="isBasketSidebar"
-      class="w-full overflow-hidden h-screen bg-[rgba(0,0,0,0.6)] fixed z-50 inset-0"
-    >
-      <div class="w-68 h-screen bg-white absolute right-0">
-        <!-- sidebar header  -->
-        <div class="text-secondary absolute top-0 left-0">
-          <button class="m-2 bg-primary/10 p-2 cursor-pointer" @click="basketSidebarToggle()">
+    <div v-if="isNavSidebar" class="fixed inset-0 z-50 bg-black/50 flex">
+      <aside class="w-72 h-full bg-[rgba(0,0,0,0.6)] shadow-xl relative">
+        <!-- header -->
+        <div class="flex items-center justify-between px-4 py-3 border-b">
+          <h1 class="font-bold text-secondary">CARTIERMAN</h1>
+          <button
+            class="p-2 rounded-full text-secondary cursor-pointer hover:bg-gray-100"
+            @click="navSidebarToggle()"
+          >
             <X />
           </button>
         </div>
-      </div>
+        <!-- content -->
+        <ul class="p-4 space-y-2">
+          <li>
+            <router-link
+              to="/"
+              class="block px-3 py-2 rounded-lg hover:bg-primary/10 text-secondary"
+            >
+              Home
+            </router-link>
+          </li>
+          <li>
+            <router-link
+              to="/about"
+              class="block px-3 py-2 rounded-lg hover:bg-primary/10 text-secondary"
+            >
+              About
+            </router-link>
+          </li>
+        </ul>
+        <!-- footer -->
+        <div class="absolute bottom-0 w-full border-t p-4">
+          <p class="text-sm text-gray-500">© 2025 Cartierman</p>
+        </div>
+      </aside>
     </div>
-    <!-- sidebars end  -->
   </transition>
-  <!-- sidebar basket end  -->
+
+  <!--  Basket Sidebar -->
+  <transition name="slide">
+    <div v-if="isBasketSidebar" class="fixed inset-0 z-50 bg-black/50 flex justify-end">
+      <aside class="w-80 h-full bg-white shadow-xl relative">
+        <!-- header -->
+        <div class="flex items-center justify-between px-4 py-3 border-b">
+          <h2 class="text-lg font-semibold text-secondary">Your Basket</h2>
+          <button class="p-2 rounded-full hover:bg-gray-100" @click="basketSidebarToggle()">
+            <X />
+          </button>
+        </div>
+        <!-- content -->
+        <div class="p-4 space-y-3">
+          <p class="text-gray-500">Your basket is empty.</p>
+        </div>
+        <!-- footer -->
+        <div class="absolute bottom-0 w-full border-t p-4">
+          <button class="w-full py-2 bg-primary text-white rounded-lg hover:bg-primary/80">
+            Checkout
+          </button>
+        </div>
+      </aside>
+    </div>
+  </transition>
 </template>
 
 <script setup lang="ts">

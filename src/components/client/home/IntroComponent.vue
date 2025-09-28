@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { Instagram, Facebook, Linkedin } from 'lucide-vue-next'
+import SwiperComponent from './SwiperComponent.vue'
 </script>
 <template>
-  <div class="relative w-full h-160 overflow-hidden flex justify-center items-end">
+  <section class="relative w-full h-160 overflow-hidden sm:flex hidden justify-center items-end">
     <div class="absolute inset-0 w-full h-full bg-[rgba(0,0,0,0.6)] z-10"></div>
     <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
       <source src="@/assets/contents/intro/introduction.mp4" type="video/mp4" />
@@ -11,7 +12,7 @@ import { Instagram, Facebook, Linkedin } from 'lucide-vue-next'
     <div
       class="w-full flex flex-col justify-end items-center gap-2 font-bold z-20 bg-primary/50 py-4 text-center"
     >
-      <h1 class="text-xl text-secondary">Terzinle fark yarat</h1>
+      <h1 class="text-xl text-secondary">Lorem Ipsum</h1>
       <p class="text-xs text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       <router-link
         to="/"
@@ -41,5 +42,9 @@ import { Instagram, Facebook, Linkedin } from 'lucide-vue-next'
       </div>
       <!-- social media end  -->
     </div>
-  </div>
+  </section>
+  <!-- mobile intro  -->
+  <section class="flex sm:hidden">
+    <SwiperComponent />
+  </section>
 </template>
