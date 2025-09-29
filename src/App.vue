@@ -12,7 +12,7 @@ const isAdmin = computed(() => route.path.startsWith('/admin'))
 
 <template>
   <LoaderComponent />
-  <main class="w-full min-h-screen bg-background">
+  <main class="w-full min-h-screen bg-background scroll-smooth">
     <header v-if="!isAdmin" class="w-full h-auto absolute z-50 inset-0 scroll-smooth">
       <TitleComponent v-if="!isAdmin" />
       <NavigationlandingComponent />
@@ -23,4 +23,26 @@ const isAdmin = computed(() => route.path.startsWith('/admin'))
   </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--color-background);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
+</style>
